@@ -12,6 +12,10 @@
 		FA168BA92087856C006799AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA168BA72087856C006799AE /* Main.storyboard */; };
 		FA168BAB2087856E006799AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA168BAA2087856E006799AE /* Assets.xcassets */; };
 		FA168BAE2087856E006799AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA168BAC2087856E006799AE /* LaunchScreen.storyboard */; };
+		FA168BBC20878769006799AE /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BBB20878769006799AE /* Thing.swift */; };
+		FA168BBE20878789006799AE /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BBD20878789006799AE /* Listing.swift */; };
+		FA168BC0208787B8006799AE /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BBF208787B8006799AE /* Children.swift */; };
+		FA168BC2208787CE006799AE /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC1208787CE006799AE /* Link.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		FA168BAA2087856E006799AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA168BAD2087856E006799AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA168BAF2087856E006799AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA168BBB20878769006799AE /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		FA168BBD20878789006799AE /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		FA168BBF208787B8006799AE /* Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
+		FA168BC1208787CE006799AE /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,10 @@
 		FA168BBA20878722006799AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA168BBB20878769006799AE /* Thing.swift */,
+				FA168BBD20878789006799AE /* Listing.swift */,
+				FA168BBF208787B8006799AE /* Children.swift */,
+				FA168BC1208787CE006799AE /* Link.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA168BA62087856C006799AE /* HomeViewController.swift in Sources */,
+				FA168BBC20878769006799AE /* Thing.swift in Sources */,
+				FA168BC0208787B8006799AE /* Children.swift in Sources */,
+				FA168BC2208787CE006799AE /* Link.swift in Sources */,
+				FA168BBE20878789006799AE /* Listing.swift in Sources */,
 				FA168BA42087856C006799AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
