@@ -17,6 +17,8 @@
 		FA168BC0208787B8006799AE /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BBF208787B8006799AE /* Children.swift */; };
 		FA168BC2208787CE006799AE /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC1208787CE006799AE /* Link.swift */; };
 		FA168BC4208788EC006799AE /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC3208788EC006799AE /* RequestService.swift */; };
+		FA168BC620878A80006799AE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC520878A80006799AE /* HomeViewModel.swift */; };
+		FA168BC820878AC9006799AE /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA168BC720878AC9006799AE /* ChildTableViewCell.xib */; };
 		FA168BCA20878EA1006799AE /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC920878EA1006799AE /* DateService.swift */; };
 		FA168BCC20878F6A006799AE /* ServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BCB20878F6A006799AE /* ServicesManager.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		FA168BBF208787B8006799AE /* Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
 		FA168BC1208787CE006799AE /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FA168BC3208788EC006799AE /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
+		FA168BC520878A80006799AE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FA168BC720878AC9006799AE /* ChildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildTableViewCell.xib; sourceTree = "<group>"; };
 		FA168BC920878EA1006799AE /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		FA168BCB20878F6A006799AE /* ServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +97,7 @@
 		FA168BB6208785F4006799AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA168BC720878AC9006799AE /* ChildTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		FA168BB7208785FA006799AE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FA168BC520878A80006799AE /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			files = (
 				FA168BAE2087856E006799AE /* LaunchScreen.storyboard in Resources */,
 				FA168BAB2087856E006799AE /* Assets.xcassets in Resources */,
+				FA168BC820878AC9006799AE /* ChildTableViewCell.xib in Resources */,
 				FA168BA92087856C006799AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +216,7 @@
 				FA168BC4208788EC006799AE /* RequestService.swift in Sources */,
 				FA168BA62087856C006799AE /* HomeViewController.swift in Sources */,
 				FA168BBC20878769006799AE /* Thing.swift in Sources */,
+				FA168BC620878A80006799AE /* HomeViewModel.swift in Sources */,
 				FA168BC0208787B8006799AE /* Children.swift in Sources */,
 				FA168BC2208787CE006799AE /* Link.swift in Sources */,
 				FA168BBE20878789006799AE /* Listing.swift in Sources */,

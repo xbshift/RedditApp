@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChildTableViewCell" rowHeight="150" id="ofX-sT-qvn" customClass="ChildTableViewCell" customModule="ringit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ofX-sT-qvn" id="dhh-ao-xTb">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6FY-q3-FQb">
+                        <rect key="frame" x="247" y="15" width="120" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="98b-0T-35J"/>
+                            <constraint firstAttribute="height" constant="120" id="Nka-KB-bDG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What can change the nature of a man?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivn-Lw-Oee">
+                        <rect key="frame" x="16" y="11" width="207" height="76"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cjg-qr-Uoe">
+                        <rect key="frame" x="16" y="87" width="231" height="52"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="11001 comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7f-Mt-V3J">
+                                <rect key="frame" x="0.0" y="0.0" width="231" height="37.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 days ago by reddit212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKv-WJ-jtC">
+                                <rect key="frame" x="0.0" y="37.5" width="231" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="PoS-GR-FVD"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6FY-q3-FQb" firstAttribute="leading" secondItem="Ivn-Lw-Oee" secondAttribute="trailing" constant="24" id="5bQ-uJ-UDH"/>
+                    <constraint firstItem="6FY-q3-FQb" firstAttribute="trailing" secondItem="dhh-ao-xTb" secondAttribute="trailingMargin" constant="8" id="7Ii-jM-MjC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cjg-qr-Uoe" secondAttribute="bottom" id="HHc-yX-Kev"/>
+                    <constraint firstItem="cjg-qr-Uoe" firstAttribute="top" secondItem="Ivn-Lw-Oee" secondAttribute="bottom" id="N30-8v-Ygp"/>
+                    <constraint firstItem="Ivn-Lw-Oee" firstAttribute="leading" secondItem="dhh-ao-xTb" secondAttribute="leadingMargin" id="Xgs-ef-s98"/>
+                    <constraint firstItem="Ivn-Lw-Oee" firstAttribute="top" secondItem="dhh-ao-xTb" secondAttribute="topMargin" id="Y90-Qp-mws"/>
+                    <constraint firstItem="6FY-q3-FQb" firstAttribute="centerY" secondItem="dhh-ao-xTb" secondAttribute="centerY" id="gN8-dO-Z8S"/>
+                    <constraint firstItem="cjg-qr-Uoe" firstAttribute="leading" secondItem="dhh-ao-xTb" secondAttribute="leadingMargin" id="gWB-EI-njQ"/>
+                    <constraint firstItem="6FY-q3-FQb" firstAttribute="leading" secondItem="cjg-qr-Uoe" secondAttribute="trailing" id="ypw-gp-5Mf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commentCountLabel" destination="Y7f-Mt-V3J" id="Rob-7Z-eNC"/>
+                <outlet property="linkTitleLabel" destination="Ivn-Lw-Oee" id="JUQ-Vh-dZm"/>
+                <outlet property="timeAndAuthorLabel" destination="fKv-WJ-jtC" id="YCY-a6-qzd"/>
+            </connections>
+            <point key="canvasLocation" x="-52" y="-67"/>
+        </tableViewCell>
+    </objects>
+</document>
