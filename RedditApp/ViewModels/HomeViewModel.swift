@@ -6,23 +6,15 @@ import UIKit
 class ChildTableViewCellViewModel {
     var title: String
     var commentCount: String
-//    var timeSincePosted: String
+    var timeSincePosted: String
     var author: String
     
     init(_ link: Link) {
         title = link.title
         author = link.author
         commentCount = String(link.numComments)
-//        timeSincePosted = link.created
+        timeSincePosted = Services.date.timeSincePosted(time: link.created)
     }
-    
-    func calculateTimeSincePostedString(time: Int) -> String {
-        let dateFormatter = DateFormatter()
-        
-//        dateFormatter.timeZone = TimeZone(abbreviation: "PS)
-        return ""
-    }
-    
 }
 class ChildTableViewCell: UITableViewCell {
     @IBOutlet weak var linkTitleLabel: UILabel!
@@ -31,7 +23,7 @@ class ChildTableViewCell: UITableViewCell {
     
     func config(viewModel: ChildTableViewCellViewModel) {
         linkTitleLabel.text = viewModel.title
-        timeAndAuthorLabel.text = "12 days ago by \(viewModel.author)"
+        timeAndAuthorLabel.text = "\(viewModel.timeSincePosted) ago by \(viewModel.author)"
         commentCountLabel.text = "\(viewModel.commentCount) comments"
     }
 }
