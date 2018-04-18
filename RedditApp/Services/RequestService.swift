@@ -1,11 +1,9 @@
-//  RequestManager.swift
+//  RequestService.swift
 
 import Foundation
 
-let Req = RequestManager.sharedInstance
-
-final class RequestManager {
-    static let sharedInstance = RequestManager()
+final class RequestService {
+    static let sharedInstance = RequestService()
     
     let baseURLString = "https://reddit.com"
     let topPathString = "/top.json"

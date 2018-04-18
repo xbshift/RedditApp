@@ -17,6 +17,8 @@
 		FA168BC0208787B8006799AE /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BBF208787B8006799AE /* Children.swift */; };
 		FA168BC2208787CE006799AE /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC1208787CE006799AE /* Link.swift */; };
 		FA168BC4208788EC006799AE /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC3208788EC006799AE /* RequestService.swift */; };
+		FA168BCA20878EA1006799AE /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC920878EA1006799AE /* DateService.swift */; };
+		FA168BCC20878F6A006799AE /* ServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BCB20878F6A006799AE /* ServicesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FA168BBF208787B8006799AE /* Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
 		FA168BC1208787CE006799AE /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FA168BC3208788EC006799AE /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
+		FA168BC920878EA1006799AE /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		FA168BCB20878F6A006799AE /* ServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,9 @@
 		FA168BB820878616006799AE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FA168BCB20878F6A006799AE /* ServicesManager.swift */,
 				FA168BC3208788EC006799AE /* RequestService.swift */,
+				FA168BC920878EA1006799AE /* DateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,6 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA168BCA20878EA1006799AE /* DateService.swift in Sources */,
+				FA168BCC20878F6A006799AE /* ServicesManager.swift in Sources */,
 				FA168BC4208788EC006799AE /* RequestService.swift in Sources */,
 				FA168BA62087856C006799AE /* HomeViewController.swift in Sources */,
 				FA168BBC20878769006799AE /* Thing.swift in Sources */,
