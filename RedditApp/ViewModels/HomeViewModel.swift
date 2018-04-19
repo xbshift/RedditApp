@@ -3,10 +3,22 @@
 import Foundation
 import UIKit
 
-class HomeViewModel: NSObject {
+class HomeViewModel: NSObject, Codable {
     var currentAfter: String?
     var children = [Children]()
     weak var delegate: HomeViewModelDelegate?
+    
+    enum CodingKeys: String, CodingKey {
+        case currentAfter
+        case children
+    }
+    
+    convenience required init(from decoder: Decoder) throws {
+        self.init()
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        currentAfter = try container.decodeIfPresent(String.self, forKey: .currentAfter) ?? nil
+        children = try container.decodeIfPresent([Children].self, forKey: .children) ?? [Children]()
+    }
     
     func showImage(path: URL) {
         delegate?.didReceiveThumbnailTap(path: path)
