@@ -18,8 +18,6 @@ struct ImagePreview: Codable {
 }
 
 struct Link: Codable {
-    //    var selftextHtml: String
-    //    var permalink: String
     var author: String
     var title: String
     var subreddit: String

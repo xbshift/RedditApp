@@ -14,14 +14,22 @@ class HomeViewController: UIViewController {
         tableView.dataSource = viewModel
         tableView.register(UINib(nibName: "ChildTableViewCell", bundle: nil), forCellReuseIdentifier: "ChildTableViewCell")
         
-        Services.req.requestJSON() { children in
-            self.viewModel.children = children
-            self.tableView.reloadData()
+        Services.req.requestJSON(limit: 50) { listing in
+            self.viewModel.currentAfter = listing.after
+            self.viewModel.children = listing.children
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 }
 
 extension HomeViewController: HomeViewModelDelegate {
+    func didPaginate() {
+        self.tableView.reloadData()
+    }
+    
     func didReceiveThumbnailTap(path: String) {
         guard let path = URL(string: path) else { return }
         let task = URLSession.shared.dataTask(with: path, completionHandler: { (data, response, error) in

@@ -8,20 +8,25 @@ final class RequestService {
     let baseURLString = "https://reddit.com"
     let topPathString = "/top.json"
     
-    func limitQuery(_ limit: Int) -> String {
-        return "?limit=\(limit)"
+    func query(limit: Int, pagingAfter: String?) -> String {
+        if let after = pagingAfter {
+            return "?after=\(after)&limit=\(limit)"
+        } else {
+            return "?limit=\(limit)"
+        }
     }
     
-    func request(urlString: String, limit: Int = 50) -> URLRequest? {
-        let path = urlString + limitQuery(limit)
+    func request(urlString: String, pagingAfter: String?, limit: Int) -> URLRequest? {
+        let path = urlString + query(limit: limit, pagingAfter: pagingAfter)
         guard let url = URL(string: path) else { return nil }
         let request = URLRequest(url: url)
         return request
     }
     
-    func requestJSON(completion: @escaping (([Children]) -> Void)) {
+    func requestJSON(limit: Int, pagingAfter: String? = nil, completion: @escaping ((Listing) -> Void)) {
         let urlString = baseURLString + topPathString
-        guard let request = self.request(urlString: urlString, limit: 50) else { return }
+        
+        guard let request = self.request(urlString: urlString, pagingAfter: pagingAfter, limit: limit) else { return }
         URLSession.shared.dataTask(with: request) { (data, _, error) in
             DispatchQueue.main.async {
                 if let error = error {
@@ -36,7 +41,7 @@ final class RequestService {
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let thing = try decoder.decode(Thing.self, from: data)
                     guard let listing = thing.data else { return }
-                    completion(listing.children)
+                    completion(listing)
                 } catch let error {
                     print(error)
                     return
