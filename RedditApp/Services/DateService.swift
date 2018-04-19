@@ -10,7 +10,7 @@ final class DateService {
         formatter = DateFormatter()
         componentsFormatter = DateComponentsFormatter()
         componentsFormatter.unitsStyle = .full
-        componentsFormatter.allowedUnits = [.year, .month, .day, .hour, .minute, .second]
+        componentsFormatter.allowedUnits = [.year, .month, .day, .hour]
         componentsFormatter.maximumUnitCount = 1
         componentsFormatter.calendar = Calendar.current
     }
