@@ -5,12 +5,21 @@ import UIKit
 
 class HomeViewModel: NSObject {
     var children = [Children]()
+    weak var delegate: HomeViewModelDelegate?
     
     func getChildren() {
         Services.req.requestJSON() { children in
             self.children = children
         }
     }
+    
+    func showImage(path: String) {
+        delegate?.didReceiveThumbnailTap(path: path)
+    }
+}
+
+protocol HomeViewModelDelegate: class {
+    func didReceiveThumbnailTap(path: String)
 }
 
 extension HomeViewModel: UITableViewDelegate {
@@ -26,6 +35,11 @@ extension HomeViewModel: UITableViewDataSource {
         let child = children[indexPath.row]
         let viewModel = ChildTableViewCellViewModel(child.data)
         cell.configure(viewModel: viewModel)
+        
+        cell.thumbnailButtonTapHandler = { [unowned self] _ in
+            self.showImage(path: viewModel.thumbnailPath)
+        }
+        
         return cell
     }
 }

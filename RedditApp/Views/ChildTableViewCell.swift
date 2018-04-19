@@ -10,6 +10,7 @@ class ChildTableViewCell: UITableViewCell {
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var thumbnailButton: UIButton!
     private var thumbnailPath: String!
+    var thumbnailButtonTapHandler: ((_ sender: UIButton) -> (Void))?
     
     func configure(viewModel: ChildTableViewCellViewModel) {
         linkTitleLabel.text = viewModel.title
@@ -38,7 +39,8 @@ class ChildTableViewCell: UITableViewCell {
         task.resume()
     }
     
-    @IBAction func thumbnailButtonAction(_ sender: Any) {
+    @IBAction private func thumbnailButtonAction(_ sender: UIButton) {
+        thumbnailButtonTapHandler?(sender)
     }
     
     override func prepareForReuse() {

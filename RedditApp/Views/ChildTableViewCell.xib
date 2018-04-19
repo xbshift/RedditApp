@@ -28,7 +28,6 @@
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plN-So-dtF" userLabel="Thumbnail Button">
                         <rect key="frame" x="259" y="25" width="100" height="100"/>
-                        <state key="normal" title="Button"/>
                         <connections>
                             <action selector="thumbnailButtonAction:" destination="ofX-sT-qvn" eventType="touchUpInside" id="FrV-pl-flj"/>
                         </connections>
