@@ -26,6 +26,13 @@
                             <constraint firstAttribute="height" constant="100" id="Whp-cb-J1m"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plN-So-dtF" userLabel="Thumbnail Button">
+                        <rect key="frame" x="259" y="25" width="100" height="100"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="thumbnailButtonAction:" destination="ofX-sT-qvn" eventType="touchUpInside" id="FrV-pl-flj"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What can change the nature of a man?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivn-Lw-Oee">
                         <rect key="frame" x="24" y="11" width="211" height="76"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -61,7 +68,11 @@
                     <constraint firstItem="cjg-qr-Uoe" firstAttribute="top" secondItem="Ivn-Lw-Oee" secondAttribute="bottom" id="N30-8v-Ygp"/>
                     <constraint firstItem="Ivn-Lw-Oee" firstAttribute="leading" secondItem="dhh-ao-xTb" secondAttribute="leadingMargin" constant="8" id="Xgs-ef-s98"/>
                     <constraint firstItem="Ivn-Lw-Oee" firstAttribute="top" secondItem="dhh-ao-xTb" secondAttribute="topMargin" id="Y90-Qp-mws"/>
+                    <constraint firstItem="plN-So-dtF" firstAttribute="width" secondItem="6FY-q3-FQb" secondAttribute="width" id="aTm-DJ-ayP"/>
+                    <constraint firstItem="plN-So-dtF" firstAttribute="centerX" secondItem="6FY-q3-FQb" secondAttribute="centerX" id="gPE-OP-U7G"/>
                     <constraint firstItem="cjg-qr-Uoe" firstAttribute="leading" secondItem="dhh-ao-xTb" secondAttribute="leadingMargin" constant="8" id="gWB-EI-njQ"/>
+                    <constraint firstItem="plN-So-dtF" firstAttribute="height" secondItem="6FY-q3-FQb" secondAttribute="height" id="iU3-bP-e6K"/>
+                    <constraint firstItem="plN-So-dtF" firstAttribute="centerY" secondItem="6FY-q3-FQb" secondAttribute="centerY" id="qTY-yd-ZFz"/>
                     <constraint firstItem="6FY-q3-FQb" firstAttribute="leading" secondItem="cjg-qr-Uoe" secondAttribute="trailing" id="ypw-gp-5Mf"/>
                 </constraints>
             </tableViewCellContentView>
@@ -69,6 +80,7 @@
                 <outlet property="commentCountLabel" destination="Y7f-Mt-V3J" id="Rob-7Z-eNC"/>
                 <outlet property="linkTitleLabel" destination="Ivn-Lw-Oee" id="JUQ-Vh-dZm"/>
                 <outlet property="thumbnail" destination="6FY-q3-FQb" id="wkD-Gj-ohG"/>
+                <outlet property="thumbnailButton" destination="plN-So-dtF" id="QAx-tv-Dg5"/>
                 <outlet property="timeAndAuthorLabel" destination="fKv-WJ-jtC" id="YCY-a6-qzd"/>
             </connections>
             <point key="canvasLocation" x="-52" y="-67"/>

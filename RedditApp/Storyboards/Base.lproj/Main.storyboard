@@ -34,10 +34,41 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="E1j-SC-jEZ" id="Y9S-bj-sHB"/>
+                        <segue destination="bOe-7J-1Kg" kind="presentation" identifier="thumbnailSegue" id="4rx-Jg-y8q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fU-2gh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-31" y="35"/>
+        </scene>
+        <!--Thumbnail View Controller-->
+        <scene sceneID="jmB-ye-LPw">
+            <objects>
+                <viewController storyboardIdentifier="thumbnailViewController" id="bOe-7J-1Kg" customClass="ThumbnailViewController" customModule="RedditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u9v-cz-XIC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hQC-05-fcP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hQC-05-fcP" firstAttribute="leading" secondItem="Tn8-Y6-vhb" secondAttribute="leading" id="9ic-Yt-msl"/>
+                            <constraint firstItem="hQC-05-fcP" firstAttribute="top" secondItem="Tn8-Y6-vhb" secondAttribute="top" id="bMj-Ha-ytR"/>
+                            <constraint firstItem="Tn8-Y6-vhb" firstAttribute="trailing" secondItem="hQC-05-fcP" secondAttribute="trailing" id="lEl-d1-TKy"/>
+                            <constraint firstItem="Tn8-Y6-vhb" firstAttribute="bottom" secondItem="hQC-05-fcP" secondAttribute="bottom" id="mNz-H2-njb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tn8-Y6-vhb"/>
+                    </view>
+                    <connections>
+                        <outlet property="thumbnailImageView" destination="hQC-05-fcP" id="PBG-Mn-ygb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RqN-m5-1H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="35"/>
         </scene>
     </scenes>
 </document>

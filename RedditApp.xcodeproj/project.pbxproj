@@ -21,6 +21,9 @@
 		FA168BC820878AC9006799AE /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA168BC720878AC9006799AE /* ChildTableViewCell.xib */; };
 		FA168BCA20878EA1006799AE /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BC920878EA1006799AE /* DateService.swift */; };
 		FA168BCC20878F6A006799AE /* ServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BCB20878F6A006799AE /* ServicesManager.swift */; };
+		FA168BCE208897F2006799AE /* ThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BCD208897F2006799AE /* ThumbnailViewController.swift */; };
+		FA168BD020889B0C006799AE /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BCF20889B0C006799AE /* ChildTableViewCell.swift */; };
+		FA168BD220889B80006799AE /* ChildTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA168BD120889B80006799AE /* ChildTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		FA168BC720878AC9006799AE /* ChildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildTableViewCell.xib; sourceTree = "<group>"; };
 		FA168BC920878EA1006799AE /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		FA168BCB20878F6A006799AE /* ServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManager.swift; sourceTree = "<group>"; };
+		FA168BCD208897F2006799AE /* ThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailViewController.swift; sourceTree = "<group>"; };
+		FA168BCF20889B0C006799AE /* ChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
+		FA168BD120889B80006799AE /* ChildTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		FA168BB6208785F4006799AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA168BCF20889B0C006799AE /* ChildTableViewCell.swift */,
 				FA168BC720878AC9006799AE /* ChildTableViewCell.xib */,
 			);
 			path = Views;
@@ -106,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				FA168BC520878A80006799AE /* HomeViewModel.swift */,
+				FA168BD120889B80006799AE /* ChildTableViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				FA168BA52087856C006799AE /* HomeViewController.swift */,
+				FA168BCD208897F2006799AE /* ThumbnailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -211,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA168BD220889B80006799AE /* ChildTableViewCellViewModel.swift in Sources */,
 				FA168BCA20878EA1006799AE /* DateService.swift in Sources */,
 				FA168BCC20878F6A006799AE /* ServicesManager.swift in Sources */,
 				FA168BC4208788EC006799AE /* RequestService.swift in Sources */,
@@ -220,6 +230,8 @@
 				FA168BC0208787B8006799AE /* Children.swift in Sources */,
 				FA168BC2208787CE006799AE /* Link.swift in Sources */,
 				FA168BBE20878789006799AE /* Listing.swift in Sources */,
+				FA168BCE208897F2006799AE /* ThumbnailViewController.swift in Sources */,
+				FA168BD020889B0C006799AE /* ChildTableViewCell.swift in Sources */,
 				FA168BA42087856C006799AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
