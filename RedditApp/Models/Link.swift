@@ -13,6 +13,10 @@ struct RedditImageInfo: Codable {
     var height: Int
 }
 
+struct ImagePreview: Codable {
+    var images: [RedditImage]
+}
+
 struct Link: Codable {
     //    var selftextHtml: String
     //    var permalink: String
@@ -24,4 +28,11 @@ struct Link: Codable {
     var created: Int
     var score: Int
     var url: String
+    
+    var preview: ImagePreview?
+    
+    var imageURL: URL? {
+        guard let path = preview?.images.first?.source.url else { return nil }
+        return URL(string: path)
+    }
 }
