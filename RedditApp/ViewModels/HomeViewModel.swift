@@ -8,7 +8,7 @@ class HomeViewModel: NSObject {
     var children = [Children]()
     weak var delegate: HomeViewModelDelegate?
     
-    func showImage(path: String) {
+    func showImage(path: URL) {
         delegate?.didReceiveThumbnailTap(path: path)
     }
     
@@ -25,7 +25,7 @@ class HomeViewModel: NSObject {
 }
 
 protocol HomeViewModelDelegate: class {
-    func didReceiveThumbnailTap(path: String)
+    func didReceiveThumbnailTap(path: URL)
     func didPaginate()
 }
 
@@ -47,7 +47,9 @@ extension HomeViewModel: UITableViewDataSource {
         cell.configure(viewModel: viewModel)
         
         cell.thumbnailButtonTapHandler = { [unowned self] _ in
-            self.showImage(path: viewModel.thumbnailPath)
+            if let imagePath = viewModel.imagePath {
+                self.showImage(path: imagePath)
+            }
         }
         
         return cell

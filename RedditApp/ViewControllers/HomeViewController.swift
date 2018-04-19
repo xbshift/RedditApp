@@ -30,8 +30,7 @@ extension HomeViewController: HomeViewModelDelegate {
         self.tableView.reloadData()
     }
     
-    func didReceiveThumbnailTap(path: String) {
-        guard let path = URL(string: path) else { return }
+    func didReceiveThumbnailTap(path: URL) {
         let task = URLSession.shared.dataTask(with: path, completionHandler: { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {

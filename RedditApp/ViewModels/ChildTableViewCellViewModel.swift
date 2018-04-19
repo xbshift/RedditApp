@@ -8,6 +8,7 @@ class ChildTableViewCellViewModel {
     var timeSincePosted: String
     var author: String
     var thumbnailPath: String
+    var imagePath: URL?
     
     init(_ link: Link) {
         title = link.title
@@ -15,5 +16,9 @@ class ChildTableViewCellViewModel {
         commentCount = String(link.numComments)
         timeSincePosted = Services.date.timeSincePosted(time: link.created)
         thumbnailPath = link.thumbnail
+        
+        if let imageURL = link.imageURL {
+            imagePath = imageURL
+        }
     }
 }
